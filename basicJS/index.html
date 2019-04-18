@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  
+    <title>basicJS</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+</head>
+<body>
+    <button type="button" id="bold"> Bold </button>
+    
+    <button type="button" id="italic"> Italic </button>
+    
+    <button type="button" id="underline"> Underline</button>
+<script>
+    $(document).ready(function() {
+     $('#bold').click( function() {
+        $('#n').css("fontWeight","bold");
+        
+        }); 
+    
+    });
+    
+
+
+    
+  $(document).ready(function() { 
+      $('#italic').click( function()
+      { $('#n').css("fontStyle","italic")
+
+      }) ;
+} )
+
+$(document).ready(function(){
+    $('#underline').click(function()
+    { $('#n').css("textDecoration","underline" )
+
+    })
+
+})
+</script>
+
+    <select id="listfont" onchange="font();" >
+        <option value="Helvatica" selected="selected"> Helvatica </option>
+        <option value="2" selected="selected"> Georgia </option>
+        <option value="3" selected="selected"> Arial </option>
+َّ    </select>
+
+<script>
+function font() {
+    var fontFromList = $("#listfont option:selected").text();
+    $("#n").css("font-family" , fontFromList); 
+}
+
+   
+</script> 
+
+   <label for="selected-choice-1" class="select" > Size </label>
+
+    <select id="size" onchange="Size();">
+        <option  value="60px"> 1 </option>
+        <option  value="80px"> 2 </option>
+        <option  value="100px"> 3 </option>
+        <option  value="120px"> 4 </option>
+    </select>
+
+<script>
+function Size() {
+   var x = $("#size option:selected").val();
+   $("#n").css("font-size" , x ) ;
+}
+
+    </script>
+    <br> <br> <br><br>
+  
+  
+  
+
+   <p id="n">tak tak</p>&nbsp;&nbsp; 
+
+    
+<script src="js/main.js"></script>
+
+</body>
+
+
+</html>
